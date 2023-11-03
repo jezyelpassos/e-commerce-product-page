@@ -68,6 +68,7 @@ main {
 }
 
 .showProduct-img {
+  display: block;
   max-width: 500px;
   max-height: 500px;
   border-radius: 16px;
