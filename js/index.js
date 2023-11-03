@@ -1,5 +1,14 @@
 const showProduct_img = document.querySelector(".showProduct-img");
 const thumbNailsImages = document.querySelector(".thumbNails-images");
+const main = document.querySelector("main");
+const productImage = document.querySelector(".showProduct");
+const showProductText = document.querySelector(".showProduct-text")
+
+showProduct_img.addEventListener("click", function() {
+  showProductText.style.display = "none";
+  main.classList.add("lightbox")
+   productImage.style.zIndex = "10000"
+})
 
 let arrayImages = [
   "image-product-1.jpg",
