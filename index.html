@@ -18,6 +18,9 @@
   </style> -->
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -32,24 +35,73 @@
         </ul>
       </nav>
       <div>
-        <li><img class="cart" src="./images/icon-cart.svg" alt="imagem do cart" /></li>
         <li>
-          <img class="profile" src="./images/image-avatar.png" alt="imagem do perfil" />
+          <img class="cart" src="./images/icon-cart.svg" alt="imagem do cart" />
+        </li>
+        <li>
+          <img
+            class="profile"
+            src="./images/image-avatar.png"
+            alt="imagem do perfil"
+          />
         </li>
       </div>
     </header>
     <hr />
-
-    Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers are
-    your perfect casual wear companion. Featuring a durable rubber outer sole,
-    they’ll withstand everything the weather can offer. $125.00 50% $250.00 0
-    Add to cart
-
-    <div class="attribution">
+    <main>
+      <section class="showProduct">
+        <div class="showProduct-image">
+          <img
+            class="showProduct-img"
+            src="./images/image-product-1.jpg"
+            alt="imagem laranja do sapato"
+          />
+        </div>
+        <div class="thumbNails-images">
+           <div>
+             <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="imagem thumb1">
+           </div>
+           <div>
+            <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="imagem thumb1">
+          </div>
+          <div>
+            <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="imagem thumb1">
+          </div>
+          <div>
+            <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="imagem thumb1">
+          </div>
+        </div>
+      </section>
+      <section class="showProduct-text">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition <br> Sneakers</h1>
+        <p class="showProduct-text__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div>
+          <div class="price">
+            <p>$125.00</p>
+            <p class="price--value">50%</p>
+          </div>
+          <p class="price--value_off">$250.00</p>
+        </div>
+        <div class="showProduct-buttons">
+          <div class="next__previous">
+            <button class="showButton-previous">-</button>
+            <button class="showButton-zero">0</button>
+            <button class="showButton-next">+</button>
+          </div>
+          <button class="showButton-add">Add to cart</button>
+        </div>
+      </section>
+    </main>
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
