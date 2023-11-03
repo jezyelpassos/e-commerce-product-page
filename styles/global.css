@@ -1,0 +1,59 @@
+:root {
+ --bg-secundary: #ffffff;
+ --action-color: #ff7d1b;
+ --text-font-primary: #1e1f23;
+ --text-font-secundary: #df9a60;
+ --text-font-tree: #c3c2c4;
+}
+
+header {
+ background-color: var(--bg-secundary);
+ color: var(--text-font-tree);
+ height: fit-content;
+ position: sticky;
+ top: 0;
+ z-index: 1;
+ display: flex;
+ justify-content: space-around;
+}
+
+header nav ul {
+ margin: 0 auto;
+ width: fit-content;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0 2rem;
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+}
+
+header div {
+ display: flex;
+ align-items: center;
+ list-style: none;
+ gap: 2rem;
+}
+
+header nav ul li {
+ min-width: fit-content;
+ height: fit-content;
+ padding: 0 0.75rem;
+ font-size: small;
+ cursor: pointer;
+ list-style: none;
+}
+
+ hr {
+ border: solid var(--text-font-tree) 0.1px;
+ margin: auto;
+ margin-top: 1.5rem;
+ width: 74vw;
+ text-align: center;
+}
+
+.profile {
+ height: 45px;
+ width: 45px;
+}
