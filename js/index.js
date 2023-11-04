@@ -4,6 +4,8 @@ const main = document.querySelector("main");
 const productImage = document.querySelector(".showProduct");
 const showProductText = document.querySelector(".showProduct-text");
 const iconClose = document.querySelector(".icon_close");
+const cart = document.querySelector(".cart");
+const areaCarrinhoVazio = document.querySelector(".area-carrinho");
 
 let arrayImages = [
   "image-product-1.jpg",
@@ -42,3 +44,8 @@ iconClose.addEventListener("click", function() {
   iconClose.classList.remove("icon_open");
   iconClose.style.display = "none";
 })  
+
+cart.addEventListener("click", function() {
+  areaCarrinhoVazio.style.display = "block";
+})
+

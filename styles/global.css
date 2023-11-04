@@ -199,3 +199,30 @@ h1 {
   gap: 0.5rem;
 }
 
+.area-carrinho {
+  display: flex;
+  padding: 1em;
+  background-color: #ffffff;
+  color: var(--text-font-primary);
+  box-shadow: 2px 2px 2px #888888;
+  width: 9rem;
+  border-radius: 10px;
+  font-size: 6px;
+  text-align: start;
+  display: none;
+  position: fixed;
+  top: 3rem;
+  left: 80%;
+}
+
+.carrinho-vazio {
+  border-bottom: 1px solid #313131;
+}
+
+.area-carrinhoVazio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
