@@ -2,13 +2,8 @@ const showProduct_img = document.querySelector(".showProduct-img");
 const thumbNailsImages = document.querySelector(".thumbNails-images");
 const main = document.querySelector("main");
 const productImage = document.querySelector(".showProduct");
-const showProductText = document.querySelector(".showProduct-text")
-
-showProduct_img.addEventListener("click", function() {
-  showProductText.style.display = "none";
-  main.classList.add("lightbox")
-   productImage.style.zIndex = "10000"
-})
+const showProductText = document.querySelector(".showProduct-text");
+const iconClose = document.querySelector(".icon_close");
 
 let arrayImages = [
   "image-product-1.jpg",
@@ -30,3 +25,20 @@ for (const image of arrayImages) {
     showProduct_img.alt = e.target.alt;
   });
 }
+
+showProduct_img.addEventListener("click", function () {
+  main.classList.add("lightbox");
+  showProductText.style.display = "none";
+  productImage.style.zIndex = "10000";
+  iconClose.style.zIndex = "10000";
+  iconClose.style.display = "block";
+
+});
+
+iconClose.addEventListener("click", function() {
+  showProductText.style.display = "block";
+  main.classList.remove("lightbox");
+  productImage.style.zIndex = "";
+  iconClose.classList.remove("icon_open");
+  iconClose.style.display = "none";
+})  

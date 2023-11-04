@@ -67,6 +67,17 @@ main {
   gap: 3rem;
 }
 
+.icon_close {
+  display: none;
+  position: sticky;
+  left: 67%;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color:var(--action-color);
+  border: none;
+  border-radius: 10px;
+}
+
 .lightbox {
   position: fixed;
   top: 0;
@@ -86,12 +97,6 @@ main {
   z-index: 10000;
 }
 
-.filtered {
-  margin: 3rem 18% 0;
-  display: flex;
-  gap: 3rem;
-  filter: blur(5px);
-}
 
 .showProduct-img {
   display: block;
@@ -114,9 +119,9 @@ main {
 
 .showProduct-text {
   display: flex;
+  gap: 2rem;
   flex-direction: column;
   padding: 1rem;
-  gap: 2rem;
   max-height: 360px;
   width: 650px;
 }
