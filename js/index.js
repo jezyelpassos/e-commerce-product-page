@@ -14,38 +14,31 @@ let arrayImages = [
   "image-product-4.jpg",
 ];
 
-for (const image of arrayImages) {
+function createThumbnail(imageSRC) {
   const newImage = document.createElement("img");
-  newImage.setAttribute("src", `./images/${image}`);
-  newImage.setAttribute("alt", `./images/${image}`);
-
+  newImage.setAttribute("src", `./images/${imageSRC}`);
+  newImage.setAttribute("alt", `./images/${imageSRC}`);
   newImage.classList.add("thumbnail");
 
-  thumbNailsImages.appendChild(newImage);
   newImage.addEventListener("click", (e) => {
     showProduct_img.src = e.target.src;
     showProduct_img.alt = e.target.alt;
   });
+  return newImage
 }
 
-showProduct_img.addEventListener("click", function () {
-  main.classList.add("lightbox");
-  showProductText.style.display = "none";
-  productImage.style.zIndex = "10000";
-  iconClose.style.zIndex = "10000";
-  iconClose.style.display = "block";
+function toggleLightbox() {
+  main.classList.toggle("lightbox");
+  showProductText.style.display = showProductText.style.display === "none" ? "block" : "none";
+  productImage.style.zIndex = main.classList.contains("lightbox") ? "10000" : "";
+  iconClose.style.zIndex = main.classList.contains("lightbox") ? "10000" : "";
+  iconClose.style.display = main.classList.contains("lightbox") ? "block" : "none";
+}
 
+arrayImages.forEach((image) => {
+  const thumbnail = createThumbnail(image);
+  thumbNailsImages.appendChild(thumbnail);
 });
 
-iconClose.addEventListener("click", function() {
-  showProductText.style.display = "block";
-  main.classList.remove("lightbox");
-  productImage.style.zIndex = "";
-  iconClose.classList.remove("icon_open");
-  iconClose.style.display = "none";
-})  
-
-cart.addEventListener("click", function() {
-  areaCarrinhoVazio.style.display = "block";
-})
-
+showProduct_img.addEventListener("click", toggleLightbox);
+iconClose.addEventListener("click", toggleLightbox);
