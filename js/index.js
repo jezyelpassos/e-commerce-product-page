@@ -1,10 +1,12 @@
 import { createThumbnail } from "./createImg.js"
 import { toggleLightbox } from "./toggleLightBox.js";
+import { showCart } from "./showCart.js";
 
 const showProduct_img = document.querySelector(".showProduct-img");
 const thumbNailsImages = document.querySelector(".thumbNails-images");
 const iconClose = document.querySelector(".icon_close");
-const cart = document.querySelector(".cart");
+const cart = document.querySelector(".area-carrinho");
+const cartBotton = document.querySelector(".cart");
 // const areaCarrinhoVazio = document.querySelector(".area-carrinho");
 
 let arrayImages = [
@@ -21,3 +23,5 @@ arrayImages.forEach((image) => {
 
 showProduct_img.addEventListener("click", toggleLightbox);
 iconClose.addEventListener("click", toggleLightbox);
+
+cartBotton.addEventListener("click", showCart(cartBotton,cart));

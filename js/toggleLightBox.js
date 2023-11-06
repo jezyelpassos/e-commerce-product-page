@@ -1,4 +1,3 @@
-const showProduct_img = document.querySelector(".showProduct-img");
 const main = document.querySelector("main");
 const productImage = document.querySelector(".showProduct");
 const showProductText = document.querySelector(".showProduct-text")
