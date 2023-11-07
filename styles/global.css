@@ -30,6 +30,11 @@ header nav ul {
  margin-bottom: 1rem;
 }
 
+header nav ul li:hover {
+  color: var(--action-color);
+  transition: ease 0.2s;
+}
+
 header div {
  display: flex;
  align-items: center;
@@ -73,9 +78,10 @@ main {
   left: 67%;
   height: 1.5rem;
   width: 1.5rem;
-  background-color:var(--action-color);
+  background-color:var(--color-button);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .lightbox {
@@ -103,12 +109,14 @@ main {
   max-width: 500px;
   max-height: 500px;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .thumbNails-images {
   display: flex;
   gap: 1em;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .thumbnail {
@@ -197,22 +205,30 @@ h1 {
   border-radius: 8px;
   color: var(--bg-secundary);
   gap: 0.5rem;
+  cursor: pointer;
 }
 
+.showButton-add:hover {
+  background-color: #fa8b35;
+  transition: ease 0.2s;
+}
+.cart {
+  cursor: pointer;
+}
 .area-carrinho {
   display: flex;
   padding: 1em;
   background-color: #ffffff;
   color: var(--text-font-primary);
   box-shadow: 2px 2px 2px #888888;
-  width: 9rem;
+  width: 15rem;
   border-radius: 10px;
-  font-size: 6px;
+  font-size: 18px;
   text-align: start;
   display: none;
   position: fixed;
   top: 3rem;
-  left: 80%;
+  left: 75%;
 }
 
 .carrinho-vazio {
