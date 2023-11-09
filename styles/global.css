@@ -62,6 +62,9 @@ header nav ul li {
 .profile {
  height: 45px;
  width: 45px;
+ border: 2px solid var(--action-color);
+ border-radius: 100%;
+ cursor: pointer;
 }
 
 /* estilizando a secao main e todos seus elementos filhos */
@@ -78,7 +81,7 @@ main {
   left: 67%;
   height: 1.5rem;
   width: 1.5rem;
-  background-color:var(--color-button);
+  background-color: transparent;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -241,4 +244,21 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
+}
+.area-conteudo_carrinho {
+  height: 2rem;
+  margin: 5px;
+}
+.area-img_conteudo {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+}
+
+.area-conteudo_carrinho__itens {
+  gap: 20px;
+}
+
+.area-conteudo_texto {
+  font-size: 8px;
 }
