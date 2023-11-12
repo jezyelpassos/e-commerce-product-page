@@ -262,3 +262,16 @@ h1 {
 .area-conteudo_texto {
   font-size: 8px;
 }
+
+.areaIten-carrinho {
+  margin: 20px auto;
+}
+
+.btn-deletar {
+  cursor: pointer;
+}
+
+.textCart {
+  position: fixed;
+  color: var(--action-color);
+}
