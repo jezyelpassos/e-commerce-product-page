@@ -18,6 +18,12 @@ header {
  justify-content: space-around;
 }
 
+@media screen and (max-width: 860px) {
+  header nav {
+    display: none;
+  }
+}
+
 header nav ul {
  margin: 0 auto;
  width: fit-content;
@@ -237,7 +243,9 @@ h1 {
 .carrinho-vazio {
   border-bottom: 1px solid #313131;
 }
-
+.msg-carrinho-vazio {
+  color: var(--action-color);
+}
 .area-carrinhoVazio {
   display: flex;
   flex-direction: column;

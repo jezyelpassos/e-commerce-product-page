@@ -3,8 +3,11 @@ const IconeCarrinho = document.querySelector(".textCart");
 let quantidadeItensCarrinho = 0;
 
 export function addCart() {
+  const msgCarrinhoVazio = document.querySelector('.msg-carrinho-vazio');
+  msgCarrinhoVazio.style.display = "none";
   const areaCarrinho = document.createElement("div");
   areaCarrinho.classList.add("areaIten-carrinho");
+
   areaCarrinho.innerHTML = ` <div class="area-conteudo_carrinho">
   <div class="area-conteudo_carrinho__itens">
      <img class="area-img_conteudo" src="./images/image-product-1-thumbnail.jpg" alt="conteudo carrinho">
@@ -15,7 +18,9 @@ export function addCart() {
   </div>
 </div>
 `;
+
   areaCarrinhoVazio.appendChild(areaCarrinho);
+
   const btnDeletar = areaCarrinho.querySelector(".btn-deletar");
 
   btnDeletar.addEventListener("click", () => deleteItem(areaCarrinho));
